@@ -1,0 +1,501 @@
+/* Wikipedia Page Styling */
+.wikipedia-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  overflow-y: auto;
+  font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+}
+
+/* Wikipedia Header */
+.wikipedia-header {
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  height: 3.125em;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.wikipedia-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.wikipedia-logo-container {
+  margin-right: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.wikipedia-logo {
+  height: 1.75em;
+}
+
+.wikipedia-search-container {
+  display: flex;
+  align-items: center;
+  width: 20em;
+  height: 2.5em;
+  border: 1px solid #a2a9b1;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.wikipedia-search-input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  padding: 0 0.5em;
+  outline: none;
+  font-size: 0.875em;
+  font-family: sans-serif;
+}
+
+.wikipedia-search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 100%;
+  background-color: #f8f9fa;
+  border: none;
+  border-left: 1px solid #a2a9b1;
+  cursor: pointer;
+}
+
+.wikipedia-search-button svg {
+  width: 1.25em;
+  height: 1.25em;
+  fill: #54595d;
+}
+
+.wikipedia-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.wikipedia-link {
+  font-size: 0.875em;
+  margin-right: 1em;
+  color: #3366cc;
+  font-family: sans-serif;
+}
+
+.wikipedia-link:hover {
+  text-decoration: underline;
+}
+
+.wikipedia-menu {
+  display: flex;
+  height: 100%;
+  font-size: 0.875em;
+  font-family: sans-serif;
+}
+
+.wikipedia-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0 0.75em;
+  height: 100%;
+  color: #3366cc;
+  cursor: pointer;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+
+.wikipedia-menu-item:hover {
+  background-color: #f8f9fa;
+}
+
+.wikipedia-menu-item.active {
+  background-color: #f8f9fa;
+  color: #222;
+  font-weight: bold;
+  border-bottom: 1px solid #a2a9b1;
+  border-left: 1px solid #a2a9b1;
+  border-right: 1px solid #a2a9b1;
+  border-top: 3px solid #3366cc;
+}
+
+.wikipedia-menu-divider {
+  width: 1px;
+  height: 100%;
+  background-color: #a2a9b1;
+}
+
+/* Wikipedia Content */
+.wikipedia-content {
+  display: flex;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.wikipedia-sidebar {
+  width: 12em;
+  padding-right: 1em;
+  flex-shrink: 0;
+}
+
+.wikipedia-sidebar-logo {
+  width: 10em;
+  margin-bottom: 1em;
+}
+
+.wikipedia-sidebar-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.wikipedia-sidebar-links {
+  font-family: sans-serif;
+  font-size: 0.875em;
+}
+
+.wikipedia-sidebar-section {
+  margin-bottom: 1.5em;
+}
+
+.wikipedia-sidebar-heading {
+  color: #54595d;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 0.25em;
+}
+
+.wikipedia-sidebar-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.wikipedia-sidebar-links li {
+  padding: 0.25em 0;
+}
+
+.wikipedia-sidebar-links a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.wikipedia-sidebar-links a:hover {
+  text-decoration: underline;
+}
+
+.wikipedia-main {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #a2a9b1;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 1em 2em;
+}
+
+.wikipedia-article-header {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #a2a9b1;
+  margin-bottom: 1em;
+}
+
+.wikipedia-article-header h1 {
+  font-size: 1.8em;
+  font-weight: normal;
+  margin-bottom: 0.2em;
+  padding: 0;
+  border-bottom: none;
+}
+
+.wikipedia-article-meta {
+  font-style: italic;
+  color: #54595d;
+  margin-bottom: 0.5em;
+  font-family: sans-serif;
+  font-size: 0.875em;
+}
+
+.wikipedia-article-url {
+  font-family: sans-serif;
+  font-size: 0.875em;
+  color: #54595d;
+}
+
+.wikipedia-article-url a {
+  color: #3366cc;
+}
+
+.wikipedia-article-content {
+  line-height: 1.6;
+  font-size: 0.975em;
+}
+
+.wikipedia-section {
+  margin-bottom: 1.5em;
+}
+
+.wikipedia-section-heading {
+  font-size: 1.5em;
+  font-weight: normal;
+  border-bottom: 1px solid #a2a9b1;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.17em;
+}
+
+.wikipedia-section-number {
+  font-weight: normal;
+}
+
+.wikipedia-paragraph {
+  margin-bottom: 0.8em;
+}
+
+.wikipedia-article-footer {
+  margin-top: 2em;
+  border-top: 1px solid #a2a9b1;
+  padding-top: 1em;
+  font-family: sans-serif;
+  font-size: 0.875em;
+  color: #54595d;
+}
+
+.wikipedia-categories {
+  margin-bottom: 0.5em;
+}
+
+.wikipedia-categories a {
+  color: #3366cc;
+  margin: 0 0.25em;
+}
+
+.wikipedia-last-edited {
+  font-style: italic;
+}
+
+.wikipedia-close-button {
+  position: fixed;
+  bottom: 1.5em;
+  right: 1.5em;
+  padding: 0.75em 1.5em;
+  background-color: #3366cc;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+.wikipedia-close-button:hover {
+  background-color: #2a4f9e;
+}
+
+.wikipedia-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  color: #54595d;
+  font-family: sans-serif;
+}
+
+.wikipedia-loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3366cc;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  animation: wikipedia-spin 2s linear infinite;
+  margin-bottom: 1em;
+}
+
+@keyframes wikipedia-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 1000px) {
+  .wikipedia-content {
+    flex-direction: column;
+  }
+  
+  .wikipedia-sidebar {
+    width: 100%;
+    margin-bottom: 1em;
+    padding-right: 0;
+  }
+  
+  .wikipedia-sidebar-logo {
+    width: 8em;
+  }
+  
+  .wikipedia-sidebar-links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .wikipedia-sidebar-section {
+    margin-right: 2em;
+  }
+  
+  .wikipedia-menu-item {
+    font-size: 0.8em;
+    padding: 0 0.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  .wikipedia-header {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5em;
+  }
+  
+  .wikipedia-header-left,
+  .wikipedia-header-right {
+    width: 100%;
+  }
+  
+  .wikipedia-search-container {
+    width: 100%;
+  }
+  
+  .wikipedia-sidebar-links {
+    flex-direction: column;
+  }
+  
+  .wikipedia-main {
+    padding: 1em;
+  }
+  
+  .wikipedia-close-button {
+    bottom: 1em;
+    right: 1em;
+    padding: 0.5em 1em;
+  }
+}
+
+/* Wikipedia Markdown Styling */
+.wikipedia-markdown {
+  line-height: 1.6;
+  font-size: 0.975em;
+  color: #202122;
+}
+
+.wikipedia-markdown h1,
+.wikipedia-markdown h2,
+.wikipedia-markdown h3,
+.wikipedia-markdown h4,
+.wikipedia-markdown h5,
+.wikipedia-markdown h6 {
+  font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+  font-weight: normal;
+  margin: 1em 0 0.5em;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 0.17em;
+}
+
+.wikipedia-markdown h1 {
+  font-size: 1.8em;
+}
+
+.wikipedia-markdown h2 {
+  font-size: 1.5em;
+}
+
+.wikipedia-markdown h3 {
+  font-size: 1.2em;
+}
+
+.wikipedia-markdown p {
+  margin-bottom: 0.8em;
+}
+
+.wikipedia-markdown ul,
+.wikipedia-markdown ol {
+  margin: 0.3em 0 0.3em 1.6em;
+  padding: 0;
+}
+
+.wikipedia-markdown li {
+  margin-bottom: 0.3em;
+}
+
+.wikipedia-markdown blockquote {
+  margin: 1em 0;
+  padding: 0 1em;
+  color: #54595d;
+  border-left: 3px solid #c8ccd1;
+}
+
+.wikipedia-markdown code {
+  font-family: monospace;
+  background-color: #f8f9fa;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-size: 0.9em;
+}
+
+.wikipedia-markdown pre {
+  background-color: #f8f9fa;
+  padding: 1em;
+  border: 1px solid #eaecf0;
+  border-radius: 2px;
+  overflow-x: auto;
+}
+
+.wikipedia-markdown pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.wikipedia-markdown a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.wikipedia-markdown a:hover {
+  text-decoration: underline;
+}
+
+.wikipedia-markdown table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  width: 100%;
+}
+
+.wikipedia-markdown th,
+.wikipedia-markdown td {
+  border: 1px solid #a2a9b1;
+  padding: 0.5em;
+}
+
+.wikipedia-markdown th {
+  background-color: #f8f9fa;
+  text-align: left;
+}
+
+.wikipedia-markdown img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wikipedia-markdown hr {
+  height: 1px;
+  background-color: #c8ccd1;
+  border: none;
+  margin: 1.5em 0;
+} 
