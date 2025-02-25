@@ -21,7 +21,7 @@ A React application that simulates a Google search interface but uses OpenAI's A
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ai-search.git
+   git clone https://github.com/wth-code/google-clone-with-ai-response.git
    cd ai-search
    ```
 
